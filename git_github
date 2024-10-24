@@ -8,6 +8,7 @@
  git add .                           # Adds all changes in the current directory to the staging area.  
  git commit -m "message"             # Commits the staged changes with a descriptive message.  
  git log                             # Shows the commit history for the current branch.  
+ git log --oneline                   # used to display log in one line 
  git diff                            # Displays changes between commits, commit and working tree, etc.  
 
 # Branching Commands
