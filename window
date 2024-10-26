@@ -260,10 +260,3 @@ This README contains a wealth of commands to assist system administrators and De
 
 """
 
-# Save the content to a README.md file
-readme_file_path = '/mnt/data/Windows_Commands_README.md'
-with open(readme_file_path, 'w') as readme_file:
-    readme_file.write(readme_content)
-
-readme_file_path
-
