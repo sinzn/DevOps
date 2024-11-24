@@ -1,160 +1,181 @@
-# Linux Commands Cheat Sheet
+  ================
+   linux commands
+  ================
 
-This cheat sheet provides a collection of common Linux commands for managing your system and projects.
+Linux is case sensitive remember 
+sudo reboot | shutdown | init 6
+sudo apt update & upgrade -y
 
-## System Management
+sudo service sshd start	Start SSH server daemon.
+echo 'Random sample text' > test4.txt
 
-| **Action**                           | **Command**                                          |
-| ------------------------------------ | ---------------------------------------------------- |
-| **Reboot system**                    | `sudo reboot`                                        |
-| **Shutdown system**                  | `sudo shutdown`                                      |
-| **Shutdown system immediately**      | `sudo shutdown now`                                  |
-| **Reboot to runlevel 6**              | `sudo init 6`                                        |
-| **Update and upgrade system**        | `sudo apt update && sudo apt upgrade -y`             |
-| **Install Docker**                   | `sudo apt install docker.io`                         |
-| **Install vim**                       | `sudo apt install vim`                               |
-| **Install curl**                      | `sudo apt install curl`                              |
-| **Install firewall**                  | `sudo apt install gufw`                              |
-| **Install neofetch**                  | `sudo apt install neofetch`                          |
-| **Install net-tools (ifconfig)**     | `sudo apt install net-tools`                         |
-| **Install vsftpd (FTP)**             | `sudo apt install vsftpd`                            |
-| **Install openssh-client (SSH)**     | `sudo apt install openssh-client`                    |
-| **Install figlet**                   | `sudo apt install figlet`                            |
-| **Install lolcat**                   | `sudo apt install lolcat`                            |
-| **Install nethogs**                  | `sudo apt install nethogs`                           |
-| **Install bmon**                     | `sudo apt install bmon`                              |
-| **Install iptraf**                   | `sudo apt install iptraf`                            |
-| **Install cbm**                      | `sudo apt install cbm`                               |
-| **Install cowsay**                   | `sudo apt install cowsay`                            |
-| **Install cmatrix**                  | `sudo apt install cmatrix`                           |
-| **Clear terminal**                   | `clear` or `Ctrl + L`                                |
-| **Install tmux**                     | `sudo apt install tmux`                              |
+Run process backgr      -- nohup [command]
+To update machine       -- sudo apt update
+to upgrade machine      -- sudo apt upgrade
+to install neofetch     -- sudo apt install neofetch 
+to install ifconfig     -- sudo apt install net-tools 
+to install ftp 	        -- sudo apt install vsftpd
+to install ssh          -- sudo apt install openssh-client
+to install figlet       -- sudo apt install figlet 
+to install lolcat       -- sudo apt install lolcat
+to clear terminal       -- clear or (ctrl + L)
+to install docker       -- sudo apt install docker.io
+to install vim          -- sudo apt install vim 
+to install curl         -- sudo apt install curl 
+to install firewall     -- sudo apt install gufw
+to install nethog       -- sudo apt install nethog
+to install bmon         -- sudo apt install bmon
+to install iptraf       -- sudo apt install iptraf
+to install cbm          -- sudo apt install cbm
+to install cowsay       -- sudo apt install cowsay
+to install cmartix      -- sudo apt install cmartix
 
-## File and Directory Management
+to check systeminfo     -- neofetch
+to print workingdir     -- pwd 
+to check directory      -- dir 
+to check history        -- history 
+to change directory     -- cd path(/home/username/Desktop)
+Go on home dir          -- cd 
+Go to 1 dir back        -- cd ..
+goto root dir           -- /
+to list directory       -- ls or ll or ls -lh(list human readable)
+to create folder        -- mkdir file_name 
+to remove folder        -- rmdir file_name
+to remove recursively   -- rm -r file_name
+Creat symbolic link     -- ln -s [path]/[file_name] [link_name]
+to read upper line      -- head -10 file_name 
+to read Last line       -- tail -10 file_name 
+Display contents page   -- more file_name 
+to find Word count      -- wc -w file_name 
+to Read and execute     -- source file_name 
+to directory stack      -- dirs 
+to server copy          -- scp [source_file] [user]@[remote_host]:[destination_path]
+to remote sync          -- rsync -a [source_directory] [user]@[remote_host]:[destination_directory]
+to secure ftp b/w       -- sftp [user]@[remote_host]
+to FTp  b/w             -- ftp [remote_host]
+to see active user      -- id
+to see last user login  -- last
+to see current user     -- who
+to show user activity   -- w
+to show user info       -- finger user_name 
+to check status of user -- sudo vi /etc/group
+to more info about user -- sudo vi /etc/passwd
+to create user with dir -- sudo useradd user_name 
+to create user w/o dir  -- sudo adduser user_name 
+to delete user account  -- sudo userdel user_name 
+to add user in group    -- sudo usermod -aG group_name user_name 
+to add password user    -- sudo passwd [user_name]
+to Add a new group.     -- sudo groupadd [group_name]	
+to Delete a group.      -- sudo groupdel [group_name]	
+to change group name    -- sudo groupmod -n [new_name] [old_name]
+to temp login admin     -- sudo commands
+to switch user          -- su user_name 
+to login with admin     -- sudo su 
+to show PID proces      -- pidof [process_name]
+to copy file            -- cp source destination
+to move file            -- mv source destination
+to rename file          -- mv file_already file_change_name   
+to create file	         -- touch file_name.txt
+to remove file          -- rm file_name.txt
+to read file in T       -- cat file_name.txt
+to read file nano       -- nano file_name.txt or ctrl+c > y(save) > Enter
+to read file in vim     -- vim file_name or 
+to enter text i vim     -- press(i) > esc > :wq(write n quit) > :qa!(quit w/o save)
+to check mannual        -- man commands_name 
+to check ip address     -- ifconfig or ip a 
+to check route 	        -- route 
+to check traceroute     -- traceroute/ tracepath [ip]
+to check internet       -- ping 8.8.8.8
+to ping with load       -- ping 8.8.8.8 
+to checek login use     -- whoami | who
+to find user info       -- id user_name 
+to find more User       -- sudo vi /etc/passwd
+tostatus of service     -- sudo systemctl status services_name 
+to start service        -- sudo systemctl start services_name
+to stop service         -- sudo systemctl stop service_name  
+to restart service      -- sudo systemctl restart services_name 
+to check process        -- top 
+to kill process         -- kill [process_name]
+to terminate all pro    -- killall [label]
+to display memory       -- pmap	
+to tree-like diagram    -- pstree
+to List active pro.     -- ps	
+to more info proces     -- htop
+to more about procs     -- bpytop
+to info about cpu       -- lscpu
+to check firewall       -- sudo ufw enable
+to check disk usage     -- df -h
+to memory status        -- vmstat
+to find package         -- whereis 
+to move cmds file       -- commands > File.txt 
+to check memory usa.    -- free
+to capture in n/w       -- nethogs  
+to system information   -- uname -r
+to See kernel info      -- uname -a
+To system uptime        -- uptime 
+to system hostname      -- hostname	
+to IP address           -- hostname -i 	
+to reboot history       -- last reboot 	
+to time and date        -- date	
+to change clock         -- timedatectl 	
+to calendar             -- cal	
+Schedule shutdown       -- shutdown [hh:mm]
+Shut down immediately   -- shutdown now
+Add new kernel module   -- modprobe [module_name]
+Show bootup messages    -- dmesg	
+show target mount       -- findmnt
+Mount a device          -- mount [device_path] [mount_point]	
+mounted file systems    -- mount
+disk usage file & dir   -- du -ah
+disk partition size     -- fdisk -l	
+Generate SSH key pairs  -- ssh-keygen
+connect host telnet     -- telnet [host]	
+permission (rwxrwxrwx)  -- chmod 777 [file_name]
+permission (rwxr-xr-x)  -- chmod 755 [file_name]
+permission (rwxrw-rw-)  -- chmod 766 [file_name]
+change ownership        -- chown [user_name] [file_name]
+change group owner      -- chown [user_name]:[group_name] [file_name]     
 
-| **Action**                           | **Command**                                          |
-| ------------------------------------ | ---------------------------------------------------- |
-| **Create a directory**               | `mkdir <dir_name>`                                   |
-| **Remove a directory**               | `rmdir <dir_name>`                                   |
-| **Remove a directory recursively**   | `rm -r <dir_name>`                                   |
-| **Create a symbolic link**           | `ln -s <source_path> <link_name>`                     |
-| **List files in a directory**        | `ls` or `ll` or `ls -lh` (list in human-readable format) |
-| **Print working directory**          | `pwd`                                                |
-| **Change directory**                 | `cd <path>`                                          |
-| **Go to home directory**             | `cd`                                                 |
-| **Go back one directory**            | `cd ..`                                              |
-| **Go to root directory**             | `cd /`                                               |
-| **Create a new file**                | `touch <file_name>`                                  |
-| **Remove a file**                    | `rm <file_name>`                                     |
-| **Rename a file**                    | `mv <old_name> <new_name>`                           |
-| **Copy a file**                      | `cp <source> <destination>`                          |
-| **Move a file**                      | `mv <source> <destination>`                          |
+project python on terminal
+run python on terminal -- python3 file_name.py
 
-## Process Management
+Project we can change mac address many time to hide our identity  
+chnage mac address 
+sudo su 
+macchanger -c
+clear
 
-| **Action**                           | **Command**                                          |
-| ------------------------------------ | ---------------------------------------------------- |
-| **Start SSH service**                | `sudo service sshd start`                            |
-| **Run a command in the background**  | `nohup <command> &`                                  |
-| **Check system processes**           | `top`                                                |
-| **Show all processes**               | `ps`                                                 |
-| **Show detailed process info**       | `htop`                                               |
-| **Terminate a process**              | `kill <PID>`                                         |
-| **Kill all processes with a label**  | `killall <process_label>`                            |
-| **Show process PID**                 | `pidof <process_name>`                               |
-| **Tree-like diagram of processes**   | `pstree`                                             |
-| **Show memory usage by process**     | `pmap <PID>`                                         |
+Project install and configure ssh 
+first  -- sudo apt install openssh-client
+second -- sudo systemctl start ssh 
+third  -- sudo ufw allow ssh 
+fourth -- sudo systemctl enable ssh 
+fifth  -- sudo useradd ssh username 
+check with cllient -- ssh username@hostname
+ 
+Project install samba server
+first --- sudo apt install samba
+second -- sudo smbpasswd -a username 
+third --- sudo ufw allow smbd
+fourth -- mkdir /home/username/Desktop
 
-## User Management
+project tmux
+first --- sudo apt install tmux
+second -- tmux new -s bob
+third --- tmux ls (to list)
+fourth -- tmux kill-session -t bob
 
-| **Action**                           | **Command**                                          |
-| ------------------------------------ | ---------------------------------------------------- |
-| **Check current user**               | `whoami`                                             |
-| **Show user info**                   | `finger <user_name>`                                 |
-| **Add a new user with home directory**| `sudo useradd <username>`                            |
-| **Add a new user without home directory** | `sudo adduser <username>`                          |
-| **Delete a user**                    | `sudo userdel <username>`                            |
-| **Add user to a group**              | `sudo usermod -aG <group_name> <username>`           |
-| **Set password for user**            | `sudo passwd <username>`                             |
-| **Add a new group**                  | `sudo groupadd <group_name>`                         |
-| **Delete a group**                   | `sudo groupdel <group_name>`                         |
-| **Change group name**                | `sudo groupmod -n <new_name> <old_name>`             |
-| **Check user status**                | `sudo vi /etc/group`                                 |
-| **More user information**            | `sudo vi /etc/passwd`                                |
+project github …or create a new repository on the command line
+echo "# websie" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:DevOopz/websie.git
+git push -u origin main
 
-## Networking
+…or push an existing repository from the command line
 
-| **Action**                           | **Command**                                          |
-| ------------------------------------ | ---------------------------------------------------- |
-| **Check IP address**                 | `ifconfig` or `ip a`                                 |
-| **Check routing table**              | `route`                                              |
-| **Check traceroute**                 | `traceroute <IP>`                                    |
-| **Ping a host**                      | `ping <IP>`                                          |
-| **Check active users**               | `w`                                                  |
-| **Show active user**                 | `who`                                                |
-| **List users**                       | `id <username>`                                      |
-| **Remote server sync**               | `rsync -a <source> <user>@<remote_host>:<destination>`|
-| **Secure FTP**                       | `sftp <user>@<remote_host>`                           |
-| **FTP transfer**                     | `ftp <remote_host>`                                  |
-| **Check firewall status**            | `sudo ufw enable`                                    |
-| **Allow SSH traffic through firewall**| `sudo ufw allow ssh`                                 |
-| **Connect via SSH**                  | `ssh <username>@<hostname>`                           |
-
-## Disk Management
-
-| **Action**                           | **Command**                                          |
-| ------------------------------------ | ---------------------------------------------------- |
-| **Check disk usage**                 | `df -h`                                              |
-| **Check memory status**              | `vmstat`                                             |
-| **Check disk partition**             | `fdisk -l`                                           |
-| **Check memory usage**               | `free`                                               |
-| **Disk usage for files and directories** | `du -ah`                                           |
-| **Find mounted filesystems**         | `mount`                                              |
-| **Mount a device**                   | `mount <device_path> <mount_point>`                   |
-| **Show bootup messages**             | `dmesg`                                              |
-| **Show disk usage summary**          | `du -sh`                                             |
-| **Generate SSH key pairs**           | `ssh-keygen`                                         |
-| **Change file permissions**          | `chmod <permissions> <file_name>`                     |
-| **Change file ownership**            | `chown <user>:<group> <file_name>`                    |
-
-## Time Management
-
-| **Action**                           | **Command**                                          |
-| ------------------------------------ | ---------------------------------------------------- |
-| **Change system time**               | `timedatectl`                                        |
-| **Show current time**                | `date`                                               |
-| **Show system uptime**               | `uptime`                                             |
-| **Show calendar**                    | `cal`                                                |
-| **Schedule shutdown**                | `shutdown <hh:mm>`                                   |
-| **Show reboot history**              | `last reboot`                                        |
-
-## Projects
-
-### Project: Change MAC Address
-1. `sudo su`
-2. `macchanger -c`
-3. `clear`
-
-### Project: Install and Configure SSH
-1. `sudo apt install openssh-client`
-2. `sudo systemctl start ssh`
-3. `sudo ufw allow ssh`
-4. `sudo systemctl enable ssh`
-5. `sudo useradd <username>`
-6. Check with client: `ssh <username>@<hostname>`
-
-### Project: Install Samba Server
-1. `sudo apt install samba`
-2. `sudo smbpasswd -a <username>`
-3. `sudo ufw allow smbd`
-4. `mkdir /home/<username>/Desktop`
-
-### Project: Using tmux
-1. `sudo apt install tmux`
-2. `tmux new -s <session_name>`
-3. `tmux ls` (to list sessions)
-4. `tmux kill-session -t <session_name>`
-
-### Project: Python on Terminal
-1. `python3 <file_name.py>`
-
+git remote add origin git@github.com:DevOopz/websie.git
+git branch -M main
+git push -u origin main
