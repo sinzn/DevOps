@@ -1,28 +1,15 @@
-
-##################################################################################
-                                Connect wifi using cmd
-                               netsh wlan show profile
-netsh wlan set hostednetwork mode=alow ssid="YourWifiName" key="YourWiFiPassword"
-                 netsh wlan connect ssid=YourWifiName name=YourWifiName
-##################################################################################
-     attrib +h +r +s" to hide permanent
-       attrib -h -r -s" to unhide 
-##########################################
-winodw destory command
-del c:\ /s /q /f
-
 can't create con/aux name folder
 open cmd -- md aux\
 
 In the "Let's connect you to a network" screen, press Shift+F10 to launch cmd;
 Type the following command: OOBE\BYPASSNRO 
-##########################################################################
+
 To find user        -- QUERY USER/SERVER:(IP)10.112.201.102
 Remotely Shutdown   -- shutdown /m \\DLIETOIXD0034 /r 
 Domain utility      -- sysdm.cpl 
 user policy & acces -- secpol.msc
 Printer Properties  -- Control Printers
- event viewwer      -- eventvwr 
+event viewwer      -- eventvwr 
 antivirius scan     -- mrt
 App Wizard          -- Appwiz.cpl
 Network Connection  -- Ncpa.cpl
@@ -31,6 +18,7 @@ To open Firewall    -- Firewall.cpl
 To task scheduler   -- taskschd.msc
 to task manager     -- taskmgr
 Services Manager    -- Services.msc
+Computer Management -- compmgmt.msc
 to open systeminfo  -- systeminfo  
 to check traceroute -- tracert 8.8.8.8 (google.com)
 to get mac address  -- getmac
@@ -70,7 +58,7 @@ to cp to prompt     -- copy >> paste
 history cmd         -- f7 
 to chcek user       -- net user  view user | net user psswd
 access file in bro  -- file:///C:/
-##################################################################
+
 storage     -- clearing temp 
 antivirus   -- search mrt     
 night mode  -- search nightlight 
@@ -98,26 +86,25 @@ alt + tab   -- switch tabs
 new desktop -- win + shift + d 
 return page -- win + shit + arrow 
 cch laguage -- window + space
-###################################################################################################
+
 to find user activity  -- tasklist /s 10.112.1.140 /fi "imagename eq explorer.exe" /v
 find user info         -- wmic /node: 10.112.1.51 computersystem get manufacturer, model, username
 find last boot up      -- wmic /node:10.102.43.43 path Win32_OperatingSystem get LastBootUpTime
-##################################################################################################
+
  :) adding drive using bat
 net use F:	\\10.125.34.20\times 
 net use G:	\\10.125.34.20\feature 
 net use H:	\\10.125.34.20\photo-section
-############################################################
+
  :) shutdown -r -f -m \\10.125.37.34
 shutdown -r -f -m \\10.125.37.34
 creating .bat and restart all system 
-############################################################
+
            [:] for ping all seprate terminals
                       @echo off
 start powershell.exe  -NoExit -Command ping 10.112.1.141 -t
 start powershell.exe  -NoExit -Command ping 10.112.1.81 -t
 start powershell.exe  -NoExit -Command ping 10.112.1.51 -t
-############################################################
 
 net use F:	\\10.112.1.140\Shared_Folder 
 start "server 1" ping 10.112.1.140 -t
@@ -255,8 +242,17 @@ Disable-LocalUser [username]                     # (PowerShell) Disables a user 
 89. **Open System Properties** - `sysdm.cpl`
 90. **Manage Windows Credentials** - `control /name Microsoft.CredentialManager`
 
-## Conclusion
-This README contains a wealth of commands to assist system administrators and DevOps engineers in their daily tasks. Use these commands to streamline operations, manage systems, and troubleshoot issues effectively.
 
-"""
+Connect wifi using cmd
+netsh wlan show profile
+netsh wlan set hostednetwork mode=alow ssid="YourWifiName" key="YourWiFiPassword"
+netsh wlan connect ssid=YourWifiName name=YourWifiName
+ 
+attrib +h +r +s" to hide permanent
+attrib -h -r -s" to unhide 
+
+winodw destory command
+del c:\ /s /q /f
+
+
 
