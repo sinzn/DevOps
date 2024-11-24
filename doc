@@ -1,0 +1,333 @@
+# Updated version without numbers and extra symbols
+docker_commands_clean_md = """
+# Docker Commands Cheatsheet
+
+## General Commands
+- **`docker --version`**  
+  Displays the installed Docker version.
+  
+- **`docker info`**  
+  Displays system-wide information about Docker.
+  
+- **`docker help`**  
+  Shows help information about Docker commands.
+
+- **`docker login`**  
+  Logs into Docker Hub or a private registry.
+
+- **`docker logout`**  
+  Logs out from Docker Hub or a private registry.
+
+- **`docker version`**  
+  Displays the Docker client and server version.
+
+- **`docker system info`**  
+  Displays detailed system information related to Docker.
+
+- **`docker history <image>`**  
+  Shows the history of an image.
+
+- **`docker events`**  
+  Displays real-time events from the Docker daemon.
+
+---
+
+## Image Commands
+- **`docker pull <image>`**  
+  Pulls an image from Docker Hub or a private registry.
+
+- **`docker push <image>`**  
+  Pushes an image to Docker Hub or a private registry.
+
+- **`docker build -t <tag> <path>`**  
+  Builds an image from a Dockerfile.
+
+- **`docker images`**  
+  Lists all Docker images.
+
+- **`docker rmi <image>`**  
+  Removes a Docker image.
+
+- **`docker tag <image> <new_image>`**  
+  Tags an image with a new name.
+
+- **`docker image ls`**  
+  Lists all Docker images (alternative to `docker images`).
+
+- **`docker image prune`**  
+  Removes unused or dangling images.
+
+- **`docker inspect <image>`**  
+  Provides detailed information about an image.
+
+- **`docker save -o <filename.tar> <image>`**  
+  Saves an image to a tar file.
+
+- **`docker load -i <filename.tar>`**  
+  Loads an image from a tar file.
+
+---
+
+## Container Commands
+- **`docker run <image>`**  
+  Runs a container from an image.
+
+- **`docker ps`**  
+  Lists running containers.
+
+- **`docker ps -a`**  
+  Lists all containers (running and stopped).
+
+- **`docker exec -it <container_id> <command>`**  
+  Executes a command inside a running container.
+
+- **`docker start <container_id>`**  
+  Starts a stopped container.
+
+- **`docker stop <container_id>`**  
+  Stops a running container.
+
+- **`docker restart <container_id>`**  
+  Restarts a running container.
+
+- **`docker pause <container_id>`**  
+  Pauses a running container.
+
+- **`docker unpause <container_id>`**  
+  Unpauses a paused container.
+
+- **`docker kill <container_id>`**  
+  Sends a signal to immediately stop a container.
+
+- **`docker rm <container_id>`**  
+  Removes a stopped container.
+
+- **`docker logs <container_id>`**  
+  Retrieves logs from a container.
+
+- **`docker exec -it <container_id> /bin/bash`**  
+  Opens a bash shell in a running container.
+
+- **`docker container prune`**  
+  Removes all stopped containers.
+
+- **`docker top <container_id>`**  
+  Displays running processes inside a container.
+
+---
+
+## Network Commands
+- **`docker network ls`**  
+  Lists all Docker networks.
+
+- **`docker network inspect <network_name>`**  
+  Inspects a Docker network.
+
+- **`docker network create <network_name>`**  
+  Creates a new Docker network.
+
+- **`docker network connect <network_name> <container_id>`**  
+  Connects a container to a network.
+
+- **`docker network disconnect <network_name> <container_id>`**  
+  Disconnects a container from a network.
+
+- **`docker network prune`**  
+  Removes unused networks.
+
+- **`docker network rm <network_name>`**  
+  Removes a Docker network.
+
+---
+
+## Volume Commands
+- **`docker volume ls`**  
+  Lists all Docker volumes.
+
+- **`docker volume create <volume_name>`**  
+  Creates a new Docker volume.
+
+- **`docker volume inspect <volume_name>`**  
+  Inspects a Docker volume.
+
+- **`docker volume rm <volume_name>`**  
+  Removes a Docker volume.
+
+- **`docker volume prune`**  
+  Removes unused volumes.
+
+---
+
+## Docker Compose Commands
+- **`docker-compose up`**  
+  Starts all services defined in a `docker-compose.yml` file.
+
+- **`docker-compose down`**  
+  Stops and removes containers, networks, and volumes defined in `docker-compose.yml`.
+
+- **`docker-compose build`**  
+  Builds or rebuilds services defined in `docker-compose.yml`.
+
+- **`docker-compose ps`**  
+  Lists containers started by Docker Compose.
+
+- **`docker-compose logs`**  
+  Shows logs from services defined in the `docker-compose.yml`.
+
+- **`docker-compose exec <service> <command>`**  
+  Runs a command in a running container managed by Docker Compose.
+
+- **`docker-compose stop`**  
+  Stops all running services defined in the `docker-compose.yml`.
+
+- **`docker-compose start`**  
+  Starts all services defined in the `docker-compose.yml`.
+
+- **`docker-compose restart`**  
+  Restarts services defined in the `docker-compose.yml`.
+
+- **`docker-compose run`**  
+  Runs a one-off command on a service.
+
+---
+
+## Docker System Commands
+- **`docker system df`**  
+  Displays disk usage for Docker objects.
+
+- **`docker system prune`**  
+  Removes unused data (dangling images, stopped containers, unused networks).
+
+- **`docker system events`**  
+  Streams events from the Docker daemon.
+
+- **`docker system info`**  
+  Displays detailed system information.
+
+---
+
+## Docker Logs and Monitoring Commands
+- **`docker stats`**  
+  Displays real-time statistics about running containers.
+
+- **`docker logs -f <container_id>`**  
+  Follows logs for a container.
+
+- **`docker logs --tail <number> <container_id>`**  
+  Shows the last n lines of logs from a container.
+
+- **`docker exec <container_id> top`**  
+  Displays processes inside a running container.
+
+---
+
+## Docker Build Commands
+- **`docker build -t <tag> <path>`**  
+  Builds a Docker image from a Dockerfile.
+
+- **`docker build --no-cache -t <tag> <path>`**  
+  Builds an image without using cache.
+
+- **`docker build --build-arg <key>=<value>`**  
+  Passes build-time variables to the Dockerfile.
+
+- **`docker build -f <Dockerfile>`**  
+  Specifies a custom Dockerfile for the build.
+
+---
+
+## Docker Attach Commands
+- **`docker attach <container_id>`**  
+  Attaches to a running container.
+
+- **`docker exec -it <container_id> <command>`**  
+  Runs a command in an existing container.
+
+- **`docker exec -u <username> -it <container_id> <command>`**  
+  Runs a command as a specific user inside the container.
+
+---
+
+## Cleanup Commands
+- **`docker container prune`**  
+  Removes all stopped containers.
+
+- **`docker image prune`**  
+  Removes unused images.
+
+- **`docker volume prune`**  
+  Removes unused volumes.
+
+- **`docker network prune`**  
+  Removes unused networks.
+
+- **`docker system prune --all`**  
+  Removes unused data, including images not referenced by containers.
+
+- **`docker system prune --volumes`**  
+  Removes unused volumes.
+
+---
+
+## Docker Security Commands
+- **`docker trust sign <image>`**  
+  Signs an image to enable trusted image content.
+
+- **`docker trust inspect <image>`**  
+  Inspects the signing status of an image.
+
+- **`docker scan <image>`**  
+  Scans an image for vulnerabilities.
+
+---
+
+## Advanced Container Commands
+- **`docker container exec -it <container_id> bash`**  
+  Runs a bash shell in a container.
+
+- **`docker container wait <container_id>`**  
+  Waits for a container to stop and returns the exit code.
+
+- **`docker container export <container_id>`**  
+  Exports a container’s filesystem as a tar archive.
+
+- **`docker container import <file.tar>`**  
+  Imports a tar archive to create a new image.
+
+---
+
+## Docker Volume Mounting
+- **`docker run -v <host_path>:<container_path>`**  
+  Mounts a host directory as a volume in the container.
+
+- **`docker run -v <volume_name>:<container_path>`**  
+  Mounts a Docker volume as a container directory.
+
+---
+
+## Docker Custom Networks
+- **`docker network create --driver <driver_name> <network_name>`**  
+  Creates a network with a custom driver.
+
+- **`docker network inspect <network_name>`**  
+  Displays detailed information about a network.
+
+- **`docker network connect <network_name> <container_id>`**  
+  Connects a container to a custom network.
+
+---
+
+## Docker Events
+- **`docker events`**  
+  Streams Docker events in real-time.
+
+- **`docker events --filter event=<event_type>`**  
+  Filters events based on type (e.g., "start", "stop").
+
+---
+
+## Docker Healthcheck
+- **`docker run --health-cmd="curl -f http://localhost/ || exit 1"`**  
+  Defines a health check for a container.
+
+- **`docker inspect --format '{{json .State.Health}}'
