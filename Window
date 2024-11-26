@@ -254,5 +254,6 @@ attrib -h -r -s" to unhide
 winodw destory command
 del c:\ /s /q /f
 
+msg amit.jain8 /server:10.112.1.51 hello, John! Please check your email.
 
 
